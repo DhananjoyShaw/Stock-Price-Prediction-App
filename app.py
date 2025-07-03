@@ -79,7 +79,7 @@ def index():
         x_data, y_data = np.array(x_data), np.array(y_data)
         
         # Load model and make predictions
-        model = load_model("models/Latest_stock_price_model.keras")
+        model = load_model("models/Latest_stock_price_model.keras", compile=False)
         predictions = model.predict(x_data)
         
         inv_pre = scaler.inverse_transform(predictions)
